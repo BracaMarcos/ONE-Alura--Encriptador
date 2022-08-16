@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Encriptador Alura</title>
+
+	<link rel="stylesheet" href="css/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/be440a05a3.js" crossorigin="anonymous"></script>
+	<link rel="icon" type="image/png" href="img/logo.png" />
+</head>
+
+<body>
+
+	<header>
+		<img id="logo" src="img/logo.png" alt="logo image">
+	</header>
+
+	<main>
+		<div class="d-flex f-col f-center">
+
+			<textarea id="messageInput" name="message" cols="30" rows="10" placeholder="Ingresá la frase"></textarea>
+			<div class="buttons-input">
+				<div id="popup-only" class="popup-only hidden">
+					<i class="fa-solid fa-triangle-exclamation"></i>
+					<p>Sólo minisculas y sin acentos</p>
+				</div>
+				<div id="popup-encrypt" class="popup hidden">
+					<i class="fa-solid fa-triangle-exclamation"></i>
+					<p>Ingresa una frase para encriptar</p>
+				</div>
+				<div id="popup-decrypt" class="popup hidden">
+					<i class="fa-solid fa-triangle-exclamation"></i>
+					<p>Ingresa una frase para desencriptar</p>
+				</div>
+				<div class="exclamation">
+					<i class="fa-solid fa-circle-exclamation"></i>
+					<p>Sólo minusculas y sin acentos</p>
+				</div>
+				<button id="encrypt" class="button-primary">Encriptar</button>
+				<button id="decrypt" class="button-secondary">Desencriptar</button>
+			</div>
+		</div>
+
+		<div class="output-message d-flex f-col f-center" id="output-message">
+			<div id="message">
+				<textarea id="output-text" readonly hidden></textarea>
+			</div>
+
+			<img id="img-output" src="img/search-messages.png" alt="image not messages">
+			<div id="no-message-container">
+				<div class="d-flex f-col">
+					<p id="no-message-title">No se encontró ningún mensaje</p>
+					<p id="no-message">Ingresa la frase que quieres encriptar o desencriptar</p>
+				</div>
+			</div>
+			<div id="copy-container">
+				<div id="popup-copy" class="popup-copy hidden">
+					<i class="fa-solid fa-circle-check"></i>
+					<p>Mensaje copiado</p>
+				</div>
+				<button class="button-secondary" id="copy" hidden>Copiar</button>
+			</div>
+		</div>
+
+	</main>
+	<footer>
+		<a title="Github del creador" href="https://github.com/BracaMarcos" target="_blank" rel="noopener noreferrer"><i
+				class="fa-brands fa-github"></i></a>
+		
+		<a title="LinkedIn del creador" href="https://www.linkedin.com/in/marcosbracamonte/" target="_blank"
+			rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+	</footer>
+	<script src="js/encriptador.js"></script>
+</body>
+
+</html>
